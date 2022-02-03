@@ -70,4 +70,13 @@ public class MarsRoverShould {
 		assertEquals(expected, result);
 	}
 
+	@ParameterizedTest
+	@CsvSource({"LLM, 0:1:S",})
+	void turn_left_twice__and_move_south(String command, String expected) {
+		var game = new MarsRover();
+		var result = game.getNexPosition(command);
+
+		assertEquals(expected, result);
+	}
+
 }
