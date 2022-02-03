@@ -11,4 +11,12 @@ public class MarsRoverShould {
 
 		assertEquals("0:0:E", result);
 	}
+
+	@Test void
+	return_00S_when_entering_two_R(){
+		var game = new MarsRover();
+		var result = game.move("RR");
+
+		assertEquals("0:0:S", result);
+	}
 }
