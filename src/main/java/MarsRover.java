@@ -1,5 +1,5 @@
 public class MarsRover {
 	public String move(String movement) {
-		return "";
+		return "0:0:E";
 	}
 }
