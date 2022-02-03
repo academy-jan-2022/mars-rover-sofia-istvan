@@ -17,6 +17,9 @@ public class Position {
 		if (direction.getDirection().equals("N")) {
 			yAxis = yAxis < 9 ? yAxis + 1 : 0;
 		}
+		if (direction.getDirection().equals("S")) {
+			yAxis = yAxis == 0 ? 9 : yAxis - 1;
+		}
 	}
 
 	public String getCurrentPosition(){

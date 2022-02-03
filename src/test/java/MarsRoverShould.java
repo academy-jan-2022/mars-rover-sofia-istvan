@@ -71,7 +71,7 @@ public class MarsRoverShould {
 	}
 
 	@ParameterizedTest
-	@CsvSource({"LLM, 0:1:S",})
+	@CsvSource({"LLM, 0:9:S",})
 	void turn_left_twice__and_move_south(String command, String expected) {
 		var game = new MarsRover();
 		var result = game.getNexPosition(command);
