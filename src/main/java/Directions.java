@@ -14,11 +14,18 @@ public enum Directions {
 		return direction;
 	}
 
-	public Directions next() {
+	public Directions rotateRight() {
 		Directions[] directions = values();
 		int currentIndex = this.ordinal();
 
 		return directions[(currentIndex + 1) % directions.length];
+	}
+
+	public Directions rotateLeft() {
+		Directions[] directions = values();
+		int currentIndex = this.ordinal();
+		int previousIndex = ((currentIndex - 1) + directions.length) % directions.length;
+		return directions[previousIndex];
 	}
 
 }
