@@ -49,4 +49,5 @@ public class MarsRoverShould {
 
 		assertEquals(expected, result);
 	}
+
 }
