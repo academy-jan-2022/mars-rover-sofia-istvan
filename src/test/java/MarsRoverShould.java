@@ -28,5 +28,13 @@ public class MarsRoverShould {
 		assertEquals("0:0:W", result);
 	}
 
+	@Test void
+	return_00N_when_turning_right_four_times(){
+		var game = new MarsRover();
+		var result = game.move("RRRR");
+
+		assertEquals("0:0:N", result);
+	}
+
 
 }
