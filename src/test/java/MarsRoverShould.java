@@ -38,29 +38,14 @@ public class MarsRoverShould {
 		assertEquals("0:0:E", result);
 	}
 
-	@Test void
-	move_one_step_north_from_starting_position(){
+	@ParameterizedTest
+	@CsvSource({"M, 0:1:N",
+			"MM, 0:2:N",
+			"MMM, 0:3:N"})
+	void move_north(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move("M");
+		var result = game.move(command);
 
-		assertEquals("0:1:N", result);
+		assertEquals(expected, result);
 	}
-
-	@Test void
-	move_two_steps_north_from_starting_position(){
-		var game = new MarsRover();
-		var result = game.move("MM");
-
-		assertEquals("0:2:N", result);
-	}
-
-	@Test void
-	move_three_steps_north_from_starting_position(){
-		var game = new MarsRover();
-		var result = game.move("MMM");
-
-		assertEquals("0:3:N", result);
-	}
-
-
 }
