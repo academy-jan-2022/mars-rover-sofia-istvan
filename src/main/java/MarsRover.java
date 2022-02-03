@@ -12,7 +12,11 @@ public class MarsRover {
 		String[] movement = movements.split("");
 
 		for(String move : movement) {
-			direction = direction.next();
+			if(move.equals("R"))
+				direction = direction.next();
+			else {
+				direction = Directions.EAST;
+			}
 		}
 
 		return position + direction.getDirection();
