@@ -1,7 +1,6 @@
 public class Position {
+	final Point point = new Point();
 	Directions direction;
-	int xAxis = 0;
-	int yAxis = 0;
 
 	public Position() {
 		this.direction = Directions.NORTH;
@@ -9,20 +8,20 @@ public class Position {
 
 	void move() {
 		if (direction.getDirection().equals("E")) {
-			xAxis = xAxis < 9 ? xAxis + 1 : 0;
+			point.setX(point.getX() < 9 ? point.getX() + 1 : 0);
 		}
 		if (direction.getDirection().equals("W")) {
-			xAxis = xAxis == 0 ? 9 : xAxis - 1;
+			point.setX(point.getX() == 0 ? 9 : point.getX() - 1);
 		}
 		if (direction.getDirection().equals("N")) {
-			yAxis = yAxis < 9 ? yAxis + 1 : 0;
+			point.setY(point.getY() < 9 ? point.getY() + 1 : 0);
 		}
 		if (direction.getDirection().equals("S")) {
-			yAxis = yAxis == 0 ? 9 : yAxis - 1;
+			point.setY(point.getY() == 0 ? 9 : point.getY() - 1);
 		}
 	}
 
 	public String getCurrentPosition(){
-		return xAxis + ":" + yAxis + ":" + direction.getDirection();
+		return point.getX() + ":" + point.getY() + ":" + direction.getDirection();
 	}
 }
