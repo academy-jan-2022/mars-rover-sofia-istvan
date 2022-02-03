@@ -54,5 +54,13 @@ public class MarsRoverShould {
 		assertEquals("2:0:N", result);
 	}
 
+	@Test void
+	move_three_steps_north_from_starting_position(){
+		var game = new MarsRover();
+		var result = game.move("MMM");
+
+		assertEquals("3:0:N", result);
+	}
+
 
 }
