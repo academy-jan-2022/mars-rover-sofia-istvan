@@ -15,10 +15,15 @@ public class MarsRover {
 				direction = direction.rotateLeft();
 			}
 			if(move.equals("M")) {
-				if (yAxis < 9) {
-					yAxis++;
-				} else {
-					yAxis = 0;
+				if(direction.getDirection().equals("E")) {
+					xAxis++;
+				}
+				else {
+					if (yAxis < 9) {
+						yAxis++;
+					} else {
+						yAxis = 0;
+					}
 				}
 			}
 		}
