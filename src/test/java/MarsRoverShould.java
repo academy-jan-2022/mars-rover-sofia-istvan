@@ -50,4 +50,13 @@ public class MarsRoverShould {
 		assertEquals(expected, result);
 	}
 
+	@ParameterizedTest
+	@CsvSource({"RM, 1:0:E",})
+	void turn_right_and_move_east(String command, String expected) {
+		var game = new MarsRover();
+		var result = game.move(command);
+
+		assertEquals(expected, result);
+	}
+
 }
