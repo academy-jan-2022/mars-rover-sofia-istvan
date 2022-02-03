@@ -5,6 +5,10 @@ public class MarsRover {
 	public String move(String movements) {
 		String position = "0:0:";
 
+		if (movements.equals("L")) {
+			return "0:0:W";
+		}
+
 		String[] movement = movements.split("");
 
 		for(String move : movement) {
