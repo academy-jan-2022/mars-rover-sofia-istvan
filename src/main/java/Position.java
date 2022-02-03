@@ -9,17 +9,10 @@ public class Position {
 
 	void move() {
 		if (direction.getDirection().equals("E")) {
-			if (xAxis < 9) {
-				xAxis++;
-			} else {
-				xAxis = 0;
-			}
-		} else {
-			if (yAxis < 9) {
-				yAxis++;
-			} else {
-				yAxis = 0;
-			}
+			xAxis = xAxis < 9 ? xAxis + 1 : 0;
+		}
+		if (direction.getDirection().equals("N")) {
+			yAxis = yAxis < 9 ? yAxis + 1 : 0;
 		}
 	}
 
