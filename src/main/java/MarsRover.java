@@ -16,7 +16,11 @@ public class MarsRover {
 			}
 			if(move.equals("M")) {
 				if(direction.getDirection().equals("E")) {
-					xAxis++;
+					if (xAxis < 9) {
+						xAxis++;
+					} else {
+						xAxis = 0;
+					}
 				}
 				else {
 					if (yAxis < 9) {
