@@ -13,7 +13,7 @@ public class MarsRoverShould {
 			  "RRRR, 0:0:N"})
 	void turn_right(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move(command);
+		var result = game.getNexPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -25,7 +25,7 @@ public class MarsRoverShould {
 			  "LLLL, 0:0:N"})
 	void turn_left(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move(command);
+		var result = game.getNexPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -33,7 +33,7 @@ public class MarsRoverShould {
 	@Test void
 	turn_multiple_directions(){
 		var game = new MarsRover();
-		var result = game.move("LLRRR");
+		var result = game.getNexPosition("LLRRR");
 
 		assertEquals("0:0:E", result);
 	}
@@ -45,7 +45,7 @@ public class MarsRoverShould {
 			"MMMMMMMMMM, 0:0:N"})
 	void move_north(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move(command);
+		var result = game.getNexPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -55,7 +55,7 @@ public class MarsRoverShould {
 			"RMMMMMMMMMM, 0:0:E",})
 	void turn_right_and_move_east(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move(command);
+		var result = game.getNexPosition(command);
 
 		assertEquals(expected, result);
 	}
