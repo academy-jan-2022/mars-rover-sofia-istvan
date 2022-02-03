@@ -1,31 +1,24 @@
 
 public class MarsRover {
 	private Directions direction = Directions.NORTH;
+	private int xAxis = 0;
+	private int yAxis = 0;
 
 	public String move(String movements) {
-		String position = "0:0:";
 		String[] movement = movements.split("");
-
-		if(movements.equals("M")) {
-			return "1:0:N";
-		}
-
-		if(movements.equals("MM")) {
-			return "2:0:N";
-		}
-
-		if(movements.equals("MMM")) {
-			return "3:0:N";
-		}
 
 		for(String move : movement) {
 			if(move.equals("R")) {
 				direction = direction.rotateRight();
-				continue;
 			}
-			direction = direction.rotateLeft();
+			if(move.equals("L")) {
+				direction = direction.rotateLeft();
+			}
+			if(move.equals("M")) {
+				yAxis++;
+			}
 		}
 
-		return position + direction.getDirection();
+		return xAxis + ":" + yAxis + ":" + direction.getDirection();
 	}
 }

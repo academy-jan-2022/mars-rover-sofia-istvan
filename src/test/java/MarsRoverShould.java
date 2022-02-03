@@ -43,7 +43,7 @@ public class MarsRoverShould {
 		var game = new MarsRover();
 		var result = game.move("M");
 
-		assertEquals("1:0:N", result);
+		assertEquals("0:1:N", result);
 	}
 
 	@Test void
@@ -51,7 +51,7 @@ public class MarsRoverShould {
 		var game = new MarsRover();
 		var result = game.move("MM");
 
-		assertEquals("2:0:N", result);
+		assertEquals("0:2:N", result);
 	}
 
 	@Test void
@@ -59,7 +59,7 @@ public class MarsRoverShould {
 		var game = new MarsRover();
 		var result = game.move("MMM");
 
-		assertEquals("3:0:N", result);
+		assertEquals("0:3:N", result);
 	}
 
 
