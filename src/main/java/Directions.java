@@ -10,9 +10,15 @@ public enum Directions {
 		this.direction = direction;
 	}
 
-	public String getDirection(){
+	public String getDirection() {
 		return direction;
 	}
 
+	public Directions next() {
+		Directions[] directions = values();
+		int currentIndex = this.ordinal();
+
+		return directions[(currentIndex + 1) % directions.length];
+	}
 
 }
