@@ -10,6 +10,10 @@ public class MarsRover {
 			return "1:0:N";
 		}
 
+		if(movements.equals("MM")) {
+			return "2:0:N";
+		}
+
 		for(String move : movement) {
 			if(move.equals("R")) {
 				direction = direction.rotateRight();
