@@ -51,7 +51,8 @@ public class MarsRoverShould {
 	}
 
 	@ParameterizedTest
-	@CsvSource({"RM, 1:0:E",})
+	@CsvSource({"RM, 1:0:E",
+			"RMMMMMMMMMM, 0:0:E",})
 	void turn_right_and_move_east(String command, String expected) {
 		var game = new MarsRover();
 		var result = game.move(command);
