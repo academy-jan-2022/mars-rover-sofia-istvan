@@ -1,20 +1,21 @@
+
 public class MarsRover {
-	private static Direction direction;
+	private Directions direction = Directions.NORTH;
 
 	public String move(String movement) {
 		if(movement.equals("RRRR")) {
-			direction = Direction.NORTH;
+			direction = Directions.NORTH;
 		}
 
 		if(movement.equals("RRR")) {
-			direction = Direction.WEST;
+			direction = Directions.WEST;
 		}
 		if (movement.equals("RR")) {
-			direction = Direction.SOUTH;
+			direction = Directions.SOUTH;
 		}
 
 		if (movement.equals("R")) {
-			direction = Direction.EAST;
+			direction = Directions.EAST;
 		}
 
 		return "0:0:" + direction.getDirection();

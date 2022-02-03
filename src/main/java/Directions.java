@@ -1,4 +1,4 @@
-public enum Direction {
+public enum Directions {
 	NORTH("N"),
 	EAST("E"),
 	SOUTH("S"),
@@ -6,7 +6,7 @@ public enum Direction {
 
 	private final String direction;
 
-	Direction(String direction) {
+	Directions(String direction) {
 		this.direction = direction;
 	}
 
