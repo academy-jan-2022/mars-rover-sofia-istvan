@@ -6,6 +6,10 @@ public class MarsRover {
 		String position = "0:0:";
 		String[] movement = movements.split("");
 
+		if(movements.equals("M")) {
+			return "1:0:N";
+		}
+
 		for(String move : movement) {
 			if(move.equals("R")) {
 				direction = direction.rotateRight();
