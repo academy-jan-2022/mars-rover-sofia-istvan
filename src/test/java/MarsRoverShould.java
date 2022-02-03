@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -27,6 +28,14 @@ public class MarsRoverShould {
 		var result = game.move(command);
 
 		assertEquals(expected, result);
+	}
+
+	@Test void
+	turn_multiple_directions(){
+		var game = new MarsRover();
+		var result = game.move("LLRRR");
+
+		assertEquals("0:0:E", result);
 	}
 
 
