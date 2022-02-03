@@ -80,4 +80,14 @@ public class MarsRoverShould {
 		assertEquals(expected, result);
 	}
 
+	@ParameterizedTest
+	@CsvSource({"MMRMMLM, 2:3:N",
+			  "MMMMMMMMMM, 0:0:N"})
+	void final_test_to_satisfy_business_requirements(String command, String expected) {
+		var game = new MarsRover();
+		var result = game.getNexPosition(command);
+
+		assertEquals(expected, result);
+	}
+
 }
