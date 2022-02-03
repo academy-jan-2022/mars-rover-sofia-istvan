@@ -1,64 +1,35 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarsRoverShould {
 
-	@Test void
-	return_00E_when_turning_right_once(){
+	@ParameterizedTest
+	@CsvSource({"R, 0:0:E",
+			  "RR, 0:0:S",
+			  "RRR, 0:0:W",
+			  "RRRR, 0:0:N"})
+	void turn_right(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move("R");
+		var result = game.move(command);
 
-		assertEquals("0:0:E", result);
+		assertEquals(expected, result);
 	}
 
-	@Test void
-	return_00S_when_turning_right_twice(){
+	@ParameterizedTest
+	@CsvSource({"L, 0:0:W",
+			  "LL, 0:0:S",
+			  "LLL, 0:0:E",
+			  "LLLL, 0:0:N"})
+	void turn_left(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.move("RR");
+		var result = game.move(command);
 
-		assertEquals("0:0:S", result);
+		assertEquals(expected, result);
 	}
 
-	@Test void
-	return_00W_when_turning_right_three_times(){
-		var game = new MarsRover();
-		var result = game.move("RRR");
 
-		assertEquals("0:0:W", result);
-	}
-
-	@Test void
-	return_00N_when_turning_right_four_times(){
-		var game = new MarsRover();
-		var result = game.move("RRRR");
-
-		assertEquals("0:0:N", result);
-	}
-
-	@Test void
-	return_00W_when_turning_left_once(){
-		var game = new MarsRover();
-		var result = game.move("L");
-
-		assertEquals("0:0:W", result);
-	}
-
-	@Test void
-	return_00S_when_turning_left_three_times(){
-		var game = new MarsRover();
-		var result = game.move("LLL");
-
-		assertEquals("0:0:E", result);
-	}
-
-	@Test void
-	return_00N_when_turning_left_four_times(){
-		var game = new MarsRover();
-		var result = game.move("LLLL");
-
-		assertEquals("0:0:N", result);
-	}
 
 
 }
