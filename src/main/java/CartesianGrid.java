@@ -30,10 +30,10 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveTop() {
-		return new CartesianGrid(boundaries, new Point(point.getX(), point.getY()));
+		return new CartesianGrid(boundaries, new Point(point.getX(), point.getY() + 1));
 	}
 
 	public int getY() {
-		return 1;
+		return point.getY();
 	}
 }
