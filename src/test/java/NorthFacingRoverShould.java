@@ -46,4 +46,11 @@ public class NorthFacingRoverShould {
 		assertEquals("0:2:N", output);
 	}
 
+	@Test void
+	wrap_around(){
+		MarsRover2 rover = new NorthFacingRover();
+		String output = rover.execute("MMMMMMMMMM").renderPosition();
+		assertEquals("0:0:N", output);
+	}
+
 }
