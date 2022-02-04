@@ -15,7 +15,7 @@ public class MarsRoverShould {
 	void setUp() {
 		grid = new CartesianGrid();
 		rover = new NorthFacingRover();
-		controller = new Controller(rover, grid);
+		controller = new Controller(grid);
 	}
 
 	@ParameterizedTest

@@ -1,13 +1,13 @@
 public class Controller {
-    private MarsRover2 rover;
+    private MarsRover2 rover = new NorthFacingRover();
     private CartesianGrid grid;
 
-    public Controller(MarsRover2 rover, CartesianGrid grid) {
-        this.rover = rover;
+    public Controller(CartesianGrid grid) {
         this.grid = grid;
     }
 
     public String execute(String command) {
-        return null;
+        return rover.execute(command).renderPosition();
+
     }
 }
