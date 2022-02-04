@@ -28,4 +28,8 @@ public class CartesianGrid {
 		var newX = boundaries.wrapOnWidth(point.getX() - 1);
 		return new CartesianGrid(boundaries,new Point(newX, point.getY()));
 	}
+
+	public CartesianGrid moveTop() {
+		return null;
+	}
 }

@@ -43,4 +43,11 @@ public class CartesianGridShould {
 		var nextGrid = grid.moveLeft().moveLeft().moveLeft();
 		assertEquals(0, nextGrid.getX());
 	}
+
+	@Test void
+	move_top_within_limits() {
+		var grid = new CartesianGrid();
+		var nextGrid = grid.moveTop();
+		assertEquals(0, nextGrid.getX());
+	}
 }
