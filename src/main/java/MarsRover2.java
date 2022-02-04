@@ -8,4 +8,6 @@ public abstract class MarsRover2 {
 	}
 
 	protected abstract MarsRover2 executeSingle(String singleCommand);
+
+	public abstract String renderPosition();
 }
