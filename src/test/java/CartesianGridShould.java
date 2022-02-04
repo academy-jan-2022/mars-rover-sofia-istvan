@@ -50,4 +50,11 @@ public class CartesianGridShould {
 		var nextGrid = grid.moveTop();
 		assertEquals(1, nextGrid.getY());
 	}
+
+	@Test void
+	move_top_two_times_within_limits() {
+		var grid = new CartesianGrid();
+		var nextGrid = grid.moveTop().moveTop();
+		assertEquals(2, nextGrid.getY());
+	}
 }
