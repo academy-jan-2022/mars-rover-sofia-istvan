@@ -8,4 +8,11 @@ public class WestFacingRoverShould {
 		var newRover = rover.execute("L");
 		assertInstanceOf(SouthFacingRover.class, newRover);
 	}
+
+	@Test void
+	head_north_when_instructed_to_turn_right(){
+		MarsRover2 rover = new WestFacingRover();
+		var newRover = rover.execute("R");
+		assertInstanceOf(NorthFacingRover.class, newRover);
+	}
 }
