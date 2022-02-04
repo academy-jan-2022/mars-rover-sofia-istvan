@@ -26,6 +26,7 @@ public class EastFacingRoverShould {
 	@Test void
 	should_move_one_step() {
 		MarsRover2 rover = new EastFacingRover();
-		assertEquals("1:0:E", rover.renderPosition());
+		var newRover = rover.execute("M");
+		assertEquals("1:0:E", newRover.renderPosition());
 	}
 }
