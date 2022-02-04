@@ -10,6 +10,6 @@ public class EastFacingRover extends MarsRover2 {
 
 	@Override
 	public String renderPosition() {
-		return null;
+		return "0:0:E";
 	}
 }
