@@ -11,12 +11,6 @@ public class NorthFacingRover extends MarsRover2 {
 		return new WestFacingRover();
 	}
 
-	private int getNextIndex(int currentValue) {
-		if (currentValue == 9)
-			return 0;
-		return currentValue + 1;
-	}
-
 	@Override
 	protected String getDirection() {
 		return "N";

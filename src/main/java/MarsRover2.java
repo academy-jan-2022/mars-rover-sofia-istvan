@@ -17,4 +17,10 @@ public abstract class MarsRover2 {
 	}
 
 	protected abstract String getDirection();
+
+	protected int getNextIndex(int currentValue) {
+		if (currentValue == 9)
+			return 0;
+		return currentValue + 1;
+	}
 }
