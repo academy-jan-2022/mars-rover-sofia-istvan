@@ -21,6 +21,6 @@ public class WestFacingRoverShould {
 	wrap_around(){
 		MarsRover2 rover = new WestFacingRover();
 		var result = rover.execute("M").renderPosition();
-		assertEquals("0:9:W", result);
+		assertEquals("9:0:W", result);
 	}
 }

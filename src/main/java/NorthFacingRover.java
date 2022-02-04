@@ -2,7 +2,7 @@ public class NorthFacingRover extends MarsRover2 {
 	@Override
 	protected MarsRover2 executeSingle(String singleCommand) {
 		if(singleCommand.equals("M")) {
-			y = getNextIndex(y);
+			y = increaseIndex(y);
 			return this;
 		}
 		if (singleCommand.equals("R")) {
