@@ -8,7 +8,7 @@ public class SouthFacingRover extends MarsRover2 {
 	}
 
 	@Override
-	public String renderPosition() {
-		return null;
+	protected String getDirection() {
+		return "S";
 	}
 }

@@ -12,5 +12,9 @@ public abstract class MarsRover2 {
 
 	protected abstract MarsRover2 executeSingle(String singleCommand);
 
-	public abstract String renderPosition();
+	public String renderPosition() {
+		return x + ":" + y + ":" + getDirection();
+	}
+
+	protected abstract String getDirection();
 }

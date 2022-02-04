@@ -16,7 +16,7 @@ public class NorthFacingRover extends MarsRover2 {
 	}
 
 	@Override
-	public String renderPosition() {
-		return "0:" + y + ":N";
+	protected String getDirection() {
+		return "N";
 	}
 }
