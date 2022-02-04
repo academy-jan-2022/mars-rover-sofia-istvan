@@ -15,4 +15,11 @@ public class CartesianGridShould {
 		var nextGrid = grid.moveRight().moveRight();
 		assertEquals(2, nextGrid.getX());
 	}
+
+	@Test void
+	move_three_times_over_limits() {
+		var grid = new CartesianGrid(new GridBoundaries(3, 10));
+		var nextGrid = grid.moveRight().moveRight().moveRight();
+		assertEquals(0, nextGrid.getX());
+	}
 }
