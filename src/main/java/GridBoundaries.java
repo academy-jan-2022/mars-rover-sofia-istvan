@@ -6,4 +6,8 @@ public class GridBoundaries {
 		this.width = width;
 		this.height = height;
 	}
+
+	public boolean isWithinWidth(int newX) {
+		return newX > 0 && newX < width;
+	}
 }

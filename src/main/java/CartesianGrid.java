@@ -16,7 +16,10 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveRight() {
-		return new CartesianGrid(boundaries, new Point(point.getX() + 1, point.getY()));
+		var newX = point.getX() + 1;
+		if (!boundaries.isWithinWidth(newX))
+			newX = 0;
+		return new CartesianGrid(boundaries, new Point(newX, point.getY()));
 	}
 
 	public int getX() {
