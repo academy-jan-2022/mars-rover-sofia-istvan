@@ -1,9 +1,9 @@
 public class Position {
 	final Point point = new Point();
-	Directions direction;
+	Direction direction;
 
 	public Position() {
-		this.direction = Directions.NORTH;
+		this.direction = Direction.NORTH;
 	}
 
 	void move() {

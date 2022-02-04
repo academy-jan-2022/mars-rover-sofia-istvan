@@ -13,7 +13,7 @@ public class MarsRoverShould {
 			  "RRRR, 0:0:N"})
 	void turn_right(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -25,7 +25,7 @@ public class MarsRoverShould {
 			  "LLLL, 0:0:N"})
 	void turn_left(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -33,7 +33,7 @@ public class MarsRoverShould {
 	@Test void
 	turn_multiple_directions(){
 		var game = new MarsRover();
-		var result = game.getNexPosition("LLRRR");
+		var result = game.getPosition("LLRRR");
 
 		assertEquals("0:0:E", result);
 	}
@@ -45,7 +45,7 @@ public class MarsRoverShould {
 			"MMMMMMMMMM, 0:0:N"})
 	void move_north(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -55,7 +55,7 @@ public class MarsRoverShould {
 			"RMMMMMMMMMM, 0:0:E",})
 	void turn_right_and_move_east(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -65,7 +65,7 @@ public class MarsRoverShould {
 			"LMMMMMMMMMM, 0:0:W",})
 	void turn_left_and_move_west(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -75,7 +75,7 @@ public class MarsRoverShould {
 			  "LLMMMMMMMMMM, 0:0:S"})
 	void turn_left_twice__and_move_south(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}
@@ -85,7 +85,7 @@ public class MarsRoverShould {
 			  "MMMMMMMMMM, 0:0:N"})
 	void final_test_to_satisfy_business_requirements(String command, String expected) {
 		var game = new MarsRover();
-		var result = game.getNexPosition(command);
+		var result = game.getPosition(command);
 
 		assertEquals(expected, result);
 	}

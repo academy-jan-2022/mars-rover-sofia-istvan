@@ -1,8 +1,12 @@
 
 public class MarsRover {
-	private final Position position = new Position();
+	private final Position position;
 
-	public String getNexPosition(String movements) {
+	public MarsRover() {
+		position = new Position();
+	}
+
+	public String getPosition(String movements) {
 		String[] movement = movements.split("");
 
 		for(String move : movement) {
