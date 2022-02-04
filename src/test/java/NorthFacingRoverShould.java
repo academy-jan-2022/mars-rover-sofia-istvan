@@ -17,4 +17,11 @@ public class NorthFacingRoverShould {
 		assertInstanceOf(EastFacingRover.class, newRover);
 	}
 
+	@Test void
+	still_head_north_when_instructed_to_move() {
+		MarsRover2 rover = new NorthFacingRover();
+		var newRover = rover.execute("M");
+		assertInstanceOf(NorthFacingRover.class, newRover);
+	}
+
 }
