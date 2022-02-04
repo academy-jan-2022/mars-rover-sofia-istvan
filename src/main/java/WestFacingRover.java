@@ -1,6 +1,6 @@
-public class WestFacingRover implements MarsRover2 {
+public class WestFacingRover extends MarsRover2 {
 	@Override
-	public MarsRover2 execute(String command) {
+	protected MarsRover2 executeSingle(String singleCommand) {
 		return null;
 	}
 }
