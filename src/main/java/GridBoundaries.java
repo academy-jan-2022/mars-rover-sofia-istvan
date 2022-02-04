@@ -7,7 +7,11 @@ public class GridBoundaries {
 		this.height = height;
 	}
 
-	public boolean isWithinWidth(int newX) {
-		return newX > 0 && newX < width;
+	public int wrapOnWidth(int x) {
+		if (x < 0)
+			return width - 1;
+		if (x >= width)
+			return 0;
+		return x;
 	}
 }

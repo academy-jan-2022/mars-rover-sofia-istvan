@@ -16,9 +16,7 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveRight() {
-		var newX = point.getX() + 1;
-		if (!boundaries.isWithinWidth(newX))
-			newX = 0;
+		var newX = boundaries.wrapOnWidth(point.getX() + 1);
 		return new CartesianGrid(boundaries, new Point(newX, point.getY()));
 	}
 
@@ -27,8 +25,7 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveLeft() {
-		var newX = point.getX() -1;
-
+		var newX = boundaries.wrapOnWidth(point.getX() - 1);
 		return new CartesianGrid(boundaries,new Point(newX, point.getY()));
 	}
 }
