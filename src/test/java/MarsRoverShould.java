@@ -25,6 +25,7 @@ public class MarsRoverShould {
 		assertEquals(expected, result.renderPosition());
 	}
 
+
 	@ParameterizedTest
 	@CsvSource({"L, 0:0:W",
 			  "LL, 0:0:S",

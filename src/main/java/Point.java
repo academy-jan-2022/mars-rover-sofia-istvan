@@ -5,6 +5,11 @@ public class Point {
 	public Point() {
 	}
 
+	public Point(int xAxis, int yAxis) {
+		this.xAxis = xAxis;
+		this.yAxis = yAxis;
+	}
+
 	public int getX() {
 		return xAxis;
 	}
