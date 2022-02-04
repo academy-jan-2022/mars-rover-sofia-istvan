@@ -1,3 +1,4 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import org.junit.jupiter.api.Test;
 
@@ -14,5 +15,12 @@ public class WestFacingRoverShould {
 		MarsRover2 rover = new WestFacingRover();
 		var newRover = rover.execute("R");
 		assertInstanceOf(NorthFacingRover.class, newRover);
+	}
+
+	@Test void
+	wrap_around(){
+		MarsRover2 rover = new WestFacingRover();
+		var result = rover.execute("M").renderPosition();
+		assertEquals("0:9:W", result);
 	}
 }
