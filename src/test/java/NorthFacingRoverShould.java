@@ -1,5 +1,6 @@
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 public class NorthFacingRoverShould {
 	@Test void
@@ -8,4 +9,5 @@ public class NorthFacingRoverShould {
 		var newRover = rover.execute("L");
 		assertInstanceOf(WestFacingRover.class, newRover);
 	}
+
 }
