@@ -24,4 +24,11 @@ public class NorthFacingRoverShould {
 		assertInstanceOf(NorthFacingRover.class, newRover);
 	}
 
+	@Test void
+	execute_several_commands() {
+		MarsRover2 rover = new NorthFacingRover();
+		var newRover = rover.execute("RL");
+		assertInstanceOf(NorthFacingRover.class, newRover);
+	}
+
 }
