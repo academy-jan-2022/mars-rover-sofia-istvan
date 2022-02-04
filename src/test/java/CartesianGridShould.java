@@ -48,6 +48,6 @@ public class CartesianGridShould {
 	move_top_within_limits() {
 		var grid = new CartesianGrid();
 		var nextGrid = grid.moveTop();
-		assertEquals(0, nextGrid.getX());
+		assertEquals(1, nextGrid.getY());
 	}
 }
