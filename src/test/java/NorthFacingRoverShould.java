@@ -32,25 +32,6 @@ public class NorthFacingRoverShould {
 		assertInstanceOf(NorthFacingRover.class, newRover);
 	}
 
-	@Test void
-	moves_north_when_asked_to() {
-		MarsRover2 rover = new NorthFacingRover();
-		String output = rover.execute("M").renderPosition();
-		assertEquals("0:1:N", output);
-	}
 
-	@Test void
-	moves_two_spaces_north_when_asked_to() {
-		MarsRover2 rover = new NorthFacingRover();
-		String output = rover.execute("MM").renderPosition();
-		assertEquals("0:2:N", output);
-	}
-
-	@Test void
-	wrap_around(){
-		MarsRover2 rover = new NorthFacingRover();
-		String output = rover.execute("MMMMMMMMMM").renderPosition();
-		assertEquals("0:0:N", output);
-	}
 
 }

@@ -9,12 +9,7 @@ public class WestFacingRover extends MarsRover2 {
 	}
 
 	@Override
-	protected MarsRover2 executeSingle(String singleCommand) {
-		if (singleCommand.equals("M")) {
-			x = decreaseIndex(x);
-			return this;
-		}
-
+	protected MarsRover2 execute(String singleCommand) {
 		if (singleCommand.equals("R"))
 			return new NorthFacingRover(x, y);
 		return new SouthFacingRover(x, y);

@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarsRoverShould {
 
-	private MarsRover2 rover;
 	private CartesianGrid grid;
 	private Controller controller;
 

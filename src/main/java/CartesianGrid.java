@@ -42,4 +42,5 @@ public class CartesianGrid {
 		var newY = boundaries.wrapOnHeight(point.getY() - 1);
 		return new CartesianGrid(boundaries, new Point(point.getX(), newY));
 	}
+
 }

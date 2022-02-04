@@ -17,10 +17,4 @@ public class SouthFacingRoverShould {
 		assertInstanceOf(WestFacingRover.class, newRover);
 	}
 
-	@Test void
-	wrap_when_moving_south_from_start_of_grid(){
-		MarsRover2 rover = new SouthFacingRover();
-		var newRover = rover.execute("M");
-		assertEquals("0:9:S", newRover.renderPosition());
-	}
 }

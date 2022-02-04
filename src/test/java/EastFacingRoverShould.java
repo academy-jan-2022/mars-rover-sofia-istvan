@@ -17,23 +17,4 @@ public class EastFacingRoverShould {
 		assertInstanceOf(SouthFacingRover.class, newRover);
 	}
 
-	@Test void
-	render_direction_correctly() {
-		MarsRover2 rover = new EastFacingRover();
-		assertEquals("0:0:E", rover.renderPosition());
-	}
-
-	@Test void
-	should_move_one_step() {
-		MarsRover2 rover = new EastFacingRover();
-		var newRover = rover.execute("M");
-		assertEquals("1:0:E", newRover.renderPosition());
-	}
-
-	@Test void
-	should_do_a_pacman() {
-		MarsRover2 rover = new EastFacingRover();
-		var newRover = rover.execute("MMMMMMMMMM");
-		assertEquals("0:0:E", newRover.renderPosition());
-	}
 }
