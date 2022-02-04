@@ -20,4 +20,14 @@ public class ControllerShould {
 
         assertEquals("0:0:S", result);
     }
+
+    @Test
+    void
+    wrap_to_initial_position(){
+        var boundaries = new GridBoundaries(2, 2);
+        var controller = new Controller(new CartesianGrid(boundaries));
+        var result = controller.execute("MM");
+
+        assertEquals("0:0:N", result);
+    }
 }
