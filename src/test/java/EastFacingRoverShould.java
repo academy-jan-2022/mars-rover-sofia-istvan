@@ -15,4 +15,6 @@ public class EastFacingRoverShould {
 		var newRover = rover.execute("R");
 		assertInstanceOf(SouthFacingRover.class, newRover);
 	}
+
+
 }
