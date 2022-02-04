@@ -17,7 +17,7 @@ public class CartesianGridShould {
 	}
 
 	@Test void
-	move_three_times_over_limits() {
+	move_three_times_right_over_limits() {
 		var grid = new CartesianGrid(new GridBoundaries(3, 10));
 		var nextGrid = grid.moveRight().moveRight().moveRight();
 		assertEquals(0, nextGrid.getX());
@@ -35,5 +35,12 @@ public class CartesianGridShould {
 		var grid = new CartesianGrid();
 		var nextGrid = grid.moveLeft();
 		assertEquals(9, nextGrid.getX());
+	}
+
+	@Test void
+	move_three_times_left_over_limits() {
+		var grid = new CartesianGrid(new GridBoundaries(3, 10));
+		var nextGrid = grid.moveLeft().moveLeft().moveLeft();
+		assertEquals(0, nextGrid.getX());
 	}
 }
