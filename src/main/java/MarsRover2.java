@@ -1,4 +1,7 @@
 public abstract class MarsRover2 {
+	protected int x = 0;
+	protected int y = 0;
+
 	public MarsRover2 execute(String command) {
 		var current = this;
 		for (String singleCommand: command.split("")) {

@@ -2,6 +2,7 @@ public class NorthFacingRover extends MarsRover2 {
 	@Override
 	protected MarsRover2 executeSingle(String singleCommand) {
 		if(singleCommand.equals("M")) {
+			y++;
 			return this;
 		}
 		if (singleCommand.equals("R")) {
@@ -12,6 +13,6 @@ public class NorthFacingRover extends MarsRover2 {
 
 	@Override
 	public String renderPosition() {
-		return "0:1:N";
+		return "0:" + y + ":N";
 	}
 }
