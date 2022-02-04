@@ -7,11 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarsRoverShould {
 
-	private MarsRover2 game;
+	private MarsRover2 rover;
+	private CartesianGrid grid;
+	private Controller controller;
 
 	@BeforeEach
 	void setUp() {
-		game = new NorthFacingRover();
+		grid = new CartesianGrid();
+		rover = new NorthFacingRover();
+		controller = new Controller(rover, grid);
 	}
 
 	@ParameterizedTest
@@ -20,9 +24,9 @@ public class MarsRoverShould {
 			  "RRR, 0:0:W",
 			  "RRRR, 0:0:N"})
 	void turn_right(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 
@@ -32,16 +36,16 @@ public class MarsRoverShould {
 			  "LLL, 0:0:E",
 			  "LLLL, 0:0:N"})
 	void turn_left(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 	@Test void
 	turn_multiple_directions(){
-		var result = game.execute("LLRRR");
+		var result = controller.execute("LLRRR");
 
-		assertEquals("0:0:E", result.renderPosition());
+		assertEquals("0:0:E", result);
 	}
 
 	@ParameterizedTest
@@ -50,45 +54,45 @@ public class MarsRoverShould {
 			"MMM, 0:3:N",
 			"MMMMMMMMMM, 0:0:N"})
 	void move_north(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 	@ParameterizedTest
 	@CsvSource({"RM, 1:0:E",
 			"RMMMMMMMMMM, 0:0:E",})
 	void turn_right_and_move_east(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 	@ParameterizedTest
 	@CsvSource({"LM, 9:0:W",
 			"LMMMMMMMMMM, 0:0:W",})
 	void turn_left_and_move_west(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 	@ParameterizedTest
 	@CsvSource({"LLM, 0:9:S",
 			  "LLMMMMMMMMMM, 0:0:S"})
 	void turn_left_twice__and_move_south(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 	@ParameterizedTest
 	@CsvSource({"MMRMMLM, 2:3:N",
 			  "MMMMMMMMMM, 0:0:N"})
 	void final_test_to_satisfy_business_requirements(String command, String expected) {
-		var result = game.execute(command);
+		var result = controller.execute(command);
 
-		assertEquals(expected, result.renderPosition());
+		assertEquals(expected, result);
 	}
 
 }
