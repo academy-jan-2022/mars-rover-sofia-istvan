@@ -16,6 +16,8 @@ public class GridBoundaries {
 	}
 
 	public int wrapOnHeight(int y) {
+		if (y < 0)
+			return height - 1;
 		 if(y >= height)
 			 return 0;
 		 return y;
