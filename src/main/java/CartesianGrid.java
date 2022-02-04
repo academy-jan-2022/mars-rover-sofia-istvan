@@ -27,6 +27,8 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveLeft() {
-		return null;
+		var newX = point.getX() -1;
+
+		return new CartesianGrid(boundaries,new Point(newX, point.getY()));
 	}
 }
