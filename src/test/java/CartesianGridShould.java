@@ -22,4 +22,11 @@ public class CartesianGridShould {
 		var nextGrid = grid.moveRight().moveRight().moveRight();
 		assertEquals(0, nextGrid.getX());
 	}
+
+	@Test void
+	move_left_within_limits() {
+		var grid = new CartesianGrid();
+		var nextGrid = grid.moveRight().moveLeft();
+		assertEquals(0, nextGrid.getX());
+	}
 }

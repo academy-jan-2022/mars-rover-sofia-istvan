@@ -25,4 +25,8 @@ public class CartesianGrid {
 	public int getX() {
 		return point.getX();
 	}
+
+	public CartesianGrid moveLeft() {
+		return null;
+	}
 }
