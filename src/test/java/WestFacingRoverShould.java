@@ -23,4 +23,11 @@ public class WestFacingRoverShould {
 		var result = rover.execute("M").renderPosition();
 		assertEquals("9:0:W", result);
 	}
+
+	@Test void
+	keeps_coordinates_all_along() {
+		MarsRover2 rover = new WestFacingRover();
+		var result = rover.execute("MLR").renderPosition();
+		assertEquals("9:0:W", result);
+	}
 }
