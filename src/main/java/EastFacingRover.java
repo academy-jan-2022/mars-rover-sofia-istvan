@@ -1,4 +1,12 @@
 public class EastFacingRover extends MarsRover2 {
+	public EastFacingRover() {
+		super(0, 0);
+	}
+
+	protected EastFacingRover(int x, int y) {
+		super(x, y);
+	}
+
 	@Override
 	protected MarsRover2 executeSingle(String singleCommand) {
 		if(singleCommand.equals("M")) {
@@ -7,10 +15,10 @@ public class EastFacingRover extends MarsRover2 {
 		}
 
 		if(singleCommand.equals("R")){
-			return new SouthFacingRover();
+			return new SouthFacingRover(x, y);
 		}
 
-		return new NorthFacingRover();
+		return new NorthFacingRover(x, y);
 	}
 
 	@Override

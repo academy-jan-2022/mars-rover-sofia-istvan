@@ -1,6 +1,11 @@
 public abstract class MarsRover2 {
-	protected int x = 0;
-	protected int y = 0;
+	protected int x;
+	protected int y;
+
+	protected MarsRover2(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
 
 	public MarsRover2 execute(String command) {
 		var current = this;
