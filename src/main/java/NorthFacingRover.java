@@ -9,4 +9,9 @@ public class NorthFacingRover extends MarsRover2 {
 		}
 		return new WestFacingRover();
 	}
+
+	@Override
+	public String renderPosition() {
+		return "0:1:N";
+	}
 }

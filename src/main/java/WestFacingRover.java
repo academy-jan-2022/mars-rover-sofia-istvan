@@ -3,4 +3,9 @@ public class WestFacingRover extends MarsRover2 {
 	protected MarsRover2 executeSingle(String singleCommand) {
 		return null;
 	}
+
+	@Override
+	public String renderPosition() {
+		return null;
+	}
 }
