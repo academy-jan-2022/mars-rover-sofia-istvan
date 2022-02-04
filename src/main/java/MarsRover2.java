@@ -28,4 +28,10 @@ public abstract class MarsRover2 {
 			return 0;
 		return currentValue + 1;
 	}
+
+	protected int decreaseIndex(int currentValue) {
+		if (currentValue == 0)
+			return 9;
+		return currentValue - 1;
+	}
 }
