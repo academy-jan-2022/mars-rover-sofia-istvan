@@ -16,30 +16,30 @@ public class CartesianGrid {
 	}
 
 	public CartesianGrid moveRight() {
-		var newX = boundaries.wrapOnWidth(point.getX() + 1);
-		return new CartesianGrid(boundaries, new Point(newX, point.getY()));
+		var newX = boundaries.wrapOnWidth(point.x() + 1);
+		return new CartesianGrid(boundaries, new Point(newX, point.y()));
 	}
 
 	public int getX() {
-		return point.getX();
+		return point.x();
 	}
 
 	public CartesianGrid moveLeft() {
-		var newX = boundaries.wrapOnWidth(point.getX() - 1);
-		return new CartesianGrid(boundaries,new Point(newX, point.getY()));
+		var newX = boundaries.wrapOnWidth(point.x() - 1);
+		return new CartesianGrid(boundaries,new Point(newX, point.y()));
 	}
 
 	public CartesianGrid moveTop() {
-		var newY = boundaries.wrapOnHeight(point.getY() + 1);
-		return new CartesianGrid(boundaries, new Point(point.getX(), newY));
+		var newY = boundaries.wrapOnHeight(point.y() + 1);
+		return new CartesianGrid(boundaries, new Point(point.x(), newY));
 	}
 
 	public int getY() {
-		return point.getY();
+		return point.y();
 	}
 
 	public CartesianGrid moveBottom() {
-		var newY = boundaries.wrapOnHeight(point.getY() - 1);
-		return new CartesianGrid(boundaries, new Point(point.getX(), newY));
+		var newY = boundaries.wrapOnHeight(point.y() - 1);
+		return new CartesianGrid(boundaries, new Point(point.x(), newY));
 	}
 }
