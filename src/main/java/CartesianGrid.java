@@ -51,6 +51,6 @@ public class CartesianGrid {
 	}
 
 	public Point moveLeft(Point point) {
-		return null;
+		return new Point((point.x() -1 ), point.y());
 	}
 }
