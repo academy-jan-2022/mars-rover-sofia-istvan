@@ -56,4 +56,8 @@ public class CartesianGrid {
 				point.y()
 		);
 	}
+
+	public Point moveTop(Point point) {
+		return null;
+	}
 }

@@ -38,21 +38,14 @@ public class CartesianGridShould {
 
 	@Test void
 	move_top_within_limits() {
-		var nextGrid = defaultGrid.moveTop();
-		assertEquals(1, nextGrid.getY());
-	}
-
-	@Test void
-	move_top_two_times_within_limits() {
-		var nextGrid = defaultGrid.moveTop().moveTop();
-		assertEquals(2, nextGrid.getY());
+		var result = defaultGrid.moveTop(new Point());
+		assertEquals(new Point(0, 1), result);
 	}
 
 	@Test void
 	move_top_over_limits() {
-		var grid = new CartesianGrid(new GridBoundaries(10, 3));
-		var nextGrid = grid.moveTop().moveTop().moveTop();
-		assertEquals(0, nextGrid.getY());
+		var result = defaultGrid.moveTop(new Point(0, 9));
+		assertEquals(new Point(), result);
 	}
 
 	@Test void
