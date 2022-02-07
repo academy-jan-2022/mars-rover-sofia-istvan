@@ -51,6 +51,9 @@ public class CartesianGrid {
 	}
 
 	public Point moveLeft(Point point) {
-		return new Point((point.x() -1 ), point.y());
+		return new Point(
+				boundaries.wrapOnWidth(point.x() - 1),
+				point.y()
+		);
 	}
 }

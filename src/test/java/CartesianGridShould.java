@@ -31,7 +31,8 @@ public class CartesianGridShould {
 
 	@Test void
 	move_left_over_limits() {
-		var result = defaultGrid.moveLeft(new Point(0, 5));
+		var grid = new CartesianGrid(new GridBoundaries(6, 7));
+		var result = grid.moveLeft(new Point(0, 5));
 		assertEquals(new Point(5, 5), result);
 	}
 
