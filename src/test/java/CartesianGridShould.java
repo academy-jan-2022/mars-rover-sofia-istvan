@@ -1,18 +1,24 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CartesianGridShould {
+	private CartesianGrid defaultGrid;
+
+	@BeforeEach
+	void beforeEach() {
+		defaultGrid = new CartesianGrid();
+	}
+
 	@Test void
 	move_right_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveRight();
+		var nextGrid = defaultGrid.moveRight();
 		assertEquals(1, nextGrid.getX());
 	}
 
 	@Test void
 	move_two_times_right_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveRight().moveRight();
+		var nextGrid = defaultGrid.moveRight().moveRight();
 		assertEquals(2, nextGrid.getX());
 	}
 
@@ -25,15 +31,13 @@ public class CartesianGridShould {
 
 	@Test void
 	move_left_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveRight().moveLeft();
+		var nextGrid = defaultGrid.moveRight().moveLeft();
 		assertEquals(0, nextGrid.getX());
 	}
 
 	@Test void
 	move_left_over_the_limits(){
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveLeft();
+		var nextGrid = defaultGrid.moveLeft();
 		assertEquals(9, nextGrid.getX());
 	}
 
@@ -46,15 +50,13 @@ public class CartesianGridShould {
 
 	@Test void
 	move_top_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveTop();
+		var nextGrid = defaultGrid.moveTop();
 		assertEquals(1, nextGrid.getY());
 	}
 
 	@Test void
 	move_top_two_times_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveTop().moveTop();
+		var nextGrid = defaultGrid.moveTop().moveTop();
 		assertEquals(2, nextGrid.getY());
 	}
 
@@ -67,15 +69,13 @@ public class CartesianGridShould {
 
 	@Test void
 	move_bottom_within_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveTop().moveBottom();
+		var nextGrid = defaultGrid.moveTop().moveBottom();
 		assertEquals(0, nextGrid.getY());
 	}
 
 	@Test void
 	move_bottom_over_limits() {
-		var grid = new CartesianGrid();
-		var nextGrid = grid.moveBottom();
+		var nextGrid = defaultGrid.moveBottom();
 		assertEquals(9, nextGrid.getY());
 	}
 
