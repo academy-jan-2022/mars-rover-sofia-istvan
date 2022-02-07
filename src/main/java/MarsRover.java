@@ -20,16 +20,4 @@ public abstract class MarsRover {
 	}
 
 	protected abstract String getDirection();
-
-	protected int increaseIndex(int currentValue) {
-		if (currentValue == 9)
-			return 0;
-		return currentValue + 1;
-	}
-
-	protected int decreaseIndex(int currentValue) {
-		if (currentValue == 0)
-			return 9;
-		return currentValue - 1;
-	}
 }

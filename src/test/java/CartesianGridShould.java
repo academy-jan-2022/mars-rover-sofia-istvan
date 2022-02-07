@@ -25,8 +25,8 @@ public class CartesianGridShould {
 
 	@Test void
 	move_left_within_limits() {
-		var nextGrid = defaultGrid.moveRight().moveLeft();
-		assertEquals(0, nextGrid.getX());
+		var result = defaultGrid.moveLeft(new Point(5, 5));
+		assertEquals(new Point(4, 5), result);
 	}
 
 	@Test void

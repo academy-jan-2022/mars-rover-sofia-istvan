@@ -49,4 +49,8 @@ public class CartesianGrid {
 				point.y()
 		);
 	}
+
+	public Point moveLeft(Point point) {
+		return null;
+	}
 }
