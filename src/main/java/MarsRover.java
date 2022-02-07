@@ -1,10 +1,8 @@
 public abstract class MarsRover {
-	protected int x;
-	protected int y;
+	protected final CartesianGrid grid;
 
-	protected MarsRover(int x, int y) {
-		this.x = x;
-		this.y = y;
+	protected MarsRover(CartesianGrid grid) {
+		this.grid = grid;
 	}
 
 	public MarsRover execute(String command) {
@@ -18,7 +16,7 @@ public abstract class MarsRover {
 	protected abstract MarsRover executeSingle(String singleCommand);
 
 	public String renderPosition() {
-		return x + ":" + y + ":" + getDirection();
+		return grid.getX() + ":" + grid.getY() + ":" + getDirection();
 	}
 
 	protected abstract String getDirection();
