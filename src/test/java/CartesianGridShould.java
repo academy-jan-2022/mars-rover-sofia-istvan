@@ -37,19 +37,6 @@ public class CartesianGridShould {
 	}
 
 	@Test void
-	move_left_over_the_limits(){
-		var nextGrid = defaultGrid.moveLeft();
-		assertEquals(9, nextGrid.getX());
-	}
-
-	@Test void
-	move_three_times_left_over_limits() {
-		var grid = new CartesianGrid(new GridBoundaries(3, 10));
-		var nextGrid = grid.moveLeft().moveLeft().moveLeft();
-		assertEquals(0, nextGrid.getX());
-	}
-
-	@Test void
 	move_top_within_limits() {
 		var nextGrid = defaultGrid.moveTop();
 		assertEquals(1, nextGrid.getY());
