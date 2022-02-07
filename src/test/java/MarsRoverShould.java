@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarsRoverShould {
 
-	private MarsRover2 game;
+	private MarsRover game;
 
 	@BeforeEach
 	void setUp() {

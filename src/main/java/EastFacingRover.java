@@ -1,4 +1,4 @@
-public class EastFacingRover extends MarsRover2 {
+public class EastFacingRover extends MarsRover {
 	public EastFacingRover() {
 		super(0, 0);
 	}
@@ -8,7 +8,7 @@ public class EastFacingRover extends MarsRover2 {
 	}
 
 	@Override
-	protected MarsRover2 executeSingle(String singleCommand) {
+	protected MarsRover executeSingle(String singleCommand) {
 		if(singleCommand.equals("M")) {
 			x = increaseIndex(x);
 			return this;

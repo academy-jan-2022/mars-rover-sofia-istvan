@@ -1,13 +1,13 @@
-public abstract class MarsRover2 {
+public abstract class MarsRover {
 	protected int x;
 	protected int y;
 
-	protected MarsRover2(int x, int y) {
+	protected MarsRover(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 
-	public MarsRover2 execute(String command) {
+	public MarsRover execute(String command) {
 		var current = this;
 		for (String singleCommand: command.split("")) {
 			current = current.executeSingle(singleCommand);
@@ -15,7 +15,7 @@ public abstract class MarsRover2 {
 		return current;
 	}
 
-	protected abstract MarsRover2 executeSingle(String singleCommand);
+	protected abstract MarsRover executeSingle(String singleCommand);
 
 	public String renderPosition() {
 		return x + ":" + y + ":" + getDirection();
