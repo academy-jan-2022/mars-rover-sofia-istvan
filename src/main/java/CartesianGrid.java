@@ -63,4 +63,8 @@ public class CartesianGrid {
 				boundaries.wrapOnHeight(point.y() + 1)
 		);
 	}
+
+	public Point moveBottom(Point point) {
+		return null;
+	}
 }

@@ -50,14 +50,14 @@ public class CartesianGridShould {
 
 	@Test void
 	move_bottom_within_limits() {
-		var nextGrid = defaultGrid.moveTop().moveBottom();
-		assertEquals(0, nextGrid.getY());
+		var result = defaultGrid.moveBottom(new Point(0, 1));
+		assertEquals(new Point(), result);
 	}
 
 	@Test void
 	move_bottom_over_limits() {
-		var nextGrid = defaultGrid.moveBottom();
-		assertEquals(9, nextGrid.getY());
+		var result = defaultGrid.moveBottom(new Point());
+		assertEquals(new Point(0, 9), result);
 	}
 
 }
