@@ -44,6 +44,9 @@ public class CartesianGrid {
 	}
 
 	public Point moveRight(Point point) {
-		return new Point(boundaries.wrapOnWidth(point.x() + 1), point.y());
+		return new Point(
+				boundaries.wrapOnWidth(point.x() + 1),
+				point.y()
+		);
 	}
 }
