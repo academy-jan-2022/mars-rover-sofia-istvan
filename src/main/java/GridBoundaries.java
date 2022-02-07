@@ -1,12 +1,4 @@
-public class GridBoundaries {
-	private final int width;
-	private final int height;
-
-	public GridBoundaries(int width, int height) {
-		this.width = width;
-		this.height = height;
-	}
-
+public record GridBoundaries(int width, int height) {
 	public int wrapOnWidth(int x) {
 		if (x < 0)
 			return width - 1;
@@ -18,9 +10,8 @@ public class GridBoundaries {
 	public int wrapOnHeight(int y) {
 		if (y < 0)
 			return height - 1;
-		 if(y >= height)
-			 return 0;
-		 return y;
-
+		if (y >= height)
+			return 0;
+		return y;
 	}
 }
