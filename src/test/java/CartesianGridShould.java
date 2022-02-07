@@ -17,16 +17,10 @@ public class CartesianGridShould {
 	}
 
 	@Test void
-	move_two_times_right_within_limits() {
-		var nextGrid = defaultGrid.moveRight().moveRight();
-		assertEquals(2, nextGrid.getX());
-	}
-
-	@Test void
-	move_three_times_right_over_limits() {
-		var grid = new CartesianGrid(new GridBoundaries(3, 10));
-		var nextGrid = grid.moveRight().moveRight().moveRight();
-		assertEquals(0, nextGrid.getX());
+	move_over_the_limits() {
+		var grid = new CartesianGrid(new GridBoundaries(2, 2));
+		var result = grid.moveRight(new Point(1,0));
+		assertEquals(new Point(), result);
 	}
 
 	@Test void
