@@ -42,4 +42,8 @@ public class CartesianGrid {
 		var newY = boundaries.wrapOnHeight(roverPosition.y() - 1);
 		return new CartesianGrid(boundaries, new Point(roverPosition.x(), newY));
 	}
+
+	public Point moveRight(Point point) {
+		return null;
+	}
 }
