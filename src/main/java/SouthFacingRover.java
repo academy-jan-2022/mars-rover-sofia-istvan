@@ -1,23 +1,23 @@
 public class SouthFacingRover extends MarsRover {
 
 	public SouthFacingRover() {
-		super(new CartesianGrid());
+		super(new CartesianGrid(), new Point());
 	}
 
-	protected SouthFacingRover(CartesianGrid grid) {
-		super(grid);
+	protected SouthFacingRover(CartesianGrid grid, Point position) {
+		super(grid, position);
 	}
 
 	@Override
 	protected MarsRover executeSingle(String singleCommand) {
 		if (singleCommand.equals("M")) {
-			return new SouthFacingRover(grid.moveBottom());
+			return new SouthFacingRover(grid, grid.moveBottom(position));
 		}
 
 		if (singleCommand.equals("R")) {
-			return new WestFacingRover(grid);
+			return new WestFacingRover(grid, position);
 		}
-		return new EastFacingRover(grid);
+		return new EastFacingRover(grid, position);
 	}
 
 	@Override
